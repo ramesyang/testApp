@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/focus_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/focus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:text="关注"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:background="@drawable/focus_button_unfocus_bg"
+        android:layout_height="40dp">
+
+        <ProgressBar
+            android:id="@+id/loading_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/loading_anim"
+            android:scaleType="center" />
+    </RelativeLayout>
+</RelativeLayout>

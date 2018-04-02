@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right"
+        android:background="#352134"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/red_bg"
+            android:gravity="center"
+            android:text="66"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/red_bg"
+            android:gravity="center"
+            android:text="520"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/red_bg"
+            android:gravity="center"
+            android:text="1314"
+            android:textColor="#FFFFFF" />
+
+        <com.rames.testapp.views.CircleProgressView
+            android:id="@+id/tv4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="连击"
+            android:background="#e202b363"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</RelativeLayout>

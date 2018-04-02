@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.rames.testapp.views.StickTopView
+                    android:id="@+id/stick_top_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dialog的Activity"
+                    android:textColor="#421345" />
+
+                <Button
+                    android:id="@+id/calender_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="到日历添加页面" />
+
+                <Button
+                    android:id="@+id/circle_progress_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="到圆形加载view页面" />
+
+                <Button
+                    android:id="@+id/auto_textview_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="到自动适应宽度TextView页面" />
+
+                <TextView
+                    android:id="@+id/link_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="详情请点击：www.baidu.com"/>
+
+                <Button
+                    android:id="@+id/invoke_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="到Invoke页面" />
+
+                <com.rames.testapp.views.FocusButton
+                    android:id="@+id/focus_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <ImageView
+                    android:id="@+id/next_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/wblive_rideo_icon_next" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#58030a7c">
+
+                    <TextView
+                        android:id="@+id/fuck_you"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="去你的" />
+
+                    <com.rames.testapp.views.ChatListTraslucentView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/fuck_you"
+                        android:visibility="visible">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/user_recycle_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="-3dp"
+                            android:visibility="visible" />
+                    </com.rames.testapp.views.ChatListTraslucentView>
+
+                </RelativeLayout>
+
+                <com.rames.testapp.ShutEditText
+                    android:id="@+id/shut_editText"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <com.rames.testapp.HeartView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <com.rames.testapp.views.TestView
+                    android:id="@+id/test_view"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <com.rames.testapp.views.GiftHitView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:background="#55cf39"
+                    android:layout_marginTop="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:background="#42232c"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <com.rames.testapp.views.MyTextView
+                    android:id="@+id/content_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:includeFontPadding="false"
+                    android:text="这是内容"
+                    android:textColor="#000000"
+                    android:textSize="44sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
