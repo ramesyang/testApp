@@ -10,4 +10,11 @@
         <!-- Defines whether to automatically resize text to fit to the view's bounds. -->
         <attr name="sizeToFit" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="HProgressView_attr">
+        <!-- Defines switcher idle timeout in ms. -->
+        <attr name="progress_bg_color" format="color" />
+        <attr name="progress_color" format="color" />
+        <attr name="progress" format="integer" />
+    </declare-styleable>
 </resources>
