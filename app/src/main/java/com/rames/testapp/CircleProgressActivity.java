@@ -68,7 +68,7 @@ public class CircleProgressActivity extends Activity implements View.OnClickList
         countTxt.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
             @Override
             public void onGlobalLayout() {
-                Tips.showTips(CircleProgressActivity.this, countTxt.isShown() ? "显示了" : "隐藏了");
+//                Tips.showTips(CircleProgressActivity.this, countTxt.isShown() ? "显示了" : "隐藏了");
             }
         });
     }
@@ -76,7 +76,7 @@ public class CircleProgressActivity extends Activity implements View.OnClickList
     ViewTreeObserver.OnGlobalLayoutListener viewListener = new ViewTreeObserver.OnGlobalLayoutListener(){
         @Override
         public void onGlobalLayout() {
-            Tips.showTips(CircleProgressActivity.this, countTxt.isShown() ? "显示了" : "隐藏了");
+//            Tips.showTips(CircleProgressActivity.this, countTxt.isShown() ? "显示了" : "隐藏了");
         }
     };
 

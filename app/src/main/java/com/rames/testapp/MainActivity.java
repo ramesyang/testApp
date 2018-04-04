@@ -93,6 +93,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         button2.setText("竖屏");
         findViewById(R.id.auto_textview_btn).setOnClickListener(this);
         findViewById(R.id.invoke_btn).setOnClickListener(this);
+        findViewById(R.id.progress_btn).setOnClickListener(this);
 
         circleBtn = (Button) findViewById(R.id.circle_progress_btn);
         circleBtn.setOnClickListener(this);
@@ -232,13 +233,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
             AutofitTextViewActivity.show(this);
         }else if(v.getId() == R.id.invoke_btn){
             InvokeActivity.show(this);
+
+        } else if (v.getId() == R.id.progress_btn){
+            ProgressViewActivity.show(this);
         }
     }
 
     class TestReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {
-            Tips.showTips(MainActivity.this, "收到广播了。。。。。。。"+intent.getStringExtra("info"));
+//            Tips.showTips(MainActivity.this, "收到广播了。。。。。。。"+intent.getStringExtra("info"));
         }
     }
 

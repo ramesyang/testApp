@@ -48,6 +48,9 @@ public class CustomProgressDialog extends Dialog {
     }
 
     private void init(){
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM,
+                WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
         setContentView(R.layout.custom_progress_dialog);
         contentTV = (TextView) findViewById(R.id.content);
         progressBar = (ProgressBar) findViewById(R.id.loading_image);

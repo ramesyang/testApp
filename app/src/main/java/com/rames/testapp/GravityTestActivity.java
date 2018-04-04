@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rames.testapp.util.ScreenSwitchUtils;
+import com.rames.testapp.util.Tips;
+import com.rames.testapp.views.CustomProgressDialog;
 
 import java.util.ArrayList;
 
@@ -44,6 +46,7 @@ public class GravityTestActivity extends Activity implements View.OnClickListene
         recyclerView = (RecyclerView) findViewById(R.id.recycle_view);
         editText = (EditText) findViewById(R.id.edit_text);
         sendBtn = (Button) findViewById(R.id.send_btn);
+        sendBtn.setOnClickListener(this);
         ssUtils = ScreenSwitchUtils.getInstance(this);
         ssUtils.start(this);
 
@@ -66,10 +69,15 @@ public class GravityTestActivity extends Activity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if (v == sendBtn) {
-
+            fun();
 
         }
 
+    }
+
+    private void fun(){
+        CustomProgressDialog dialog = new CustomProgressDialog(this);
+        dialog.showProgress();
     }
 
     @Override

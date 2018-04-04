@@ -45,18 +45,18 @@ public class TestView extends View {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        Tips.showTips(getContext(), "显示了onAttachedToWindow");
+//        Tips.showTips(getContext(), "显示了onAttachedToWindow");
     }
 
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        Tips.showTips(getContext(), "隐藏了onDetachedFromWindow");
+//        Tips.showTips(getContext(), "隐藏了onDetachedFromWindow");
     }
 
     @Override
     protected void onVisibilityChanged(View changedView, int visibility) {
-        Tips.showTips(getContext(), visibility == View.VISIBLE ? "显示了，，，" : "隐藏了...");
+//        Tips.showTips(getContext(), visibility == View.VISIBLE ? "显示了，，，" : "隐藏了...");
     }
 
     @Override
