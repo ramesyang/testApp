@@ -11,15 +11,13 @@ import java.io.File;
  * @date 2012-09-16
  */
 public class AppUtil {
-	private static boolean isRelease = false;
-
 
 	/**
 	 * 用 System.out.println 打印调试信息
 	 * ( 若调试开关关闭，则不打印 )
 	 */
 	public static void print(String x) {
-		if (null == x || !isRelease) {
+		if (null == x || !Constants.isRelease) {
 			return;
 		}
 
@@ -33,7 +31,7 @@ public class AppUtil {
 	 * @param msg
 	 */
 	public static void verbose(String tag, String msg) {
-		if (null == msg || !isRelease) {
+		if (null == msg || !Constants.isRelease) {
 			return;
 		}
 
@@ -47,7 +45,7 @@ public class AppUtil {
 	 * @param msg
 	 */
 	public static void verbose(String msg) {
-		if (null == msg || !isRelease) {
+		if (null == msg || !Constants.isRelease) {
 			return;
 		}
 
@@ -61,7 +59,7 @@ public class AppUtil {
 	 * @param msg
 	 */
 	public static void error(Object obj, String msg) {
-		if (null == msg || !isRelease) {
+		if (null == msg || !Constants.isRelease) {
 			return;
 		}
 
@@ -82,7 +80,7 @@ public class AppUtil {
 	 * @param msg
 	 */
 	public static void error(String msg) {
-		if (null == msg || !isRelease) {
+		if (null == msg || !Constants.isRelease) {
 			return;
 		}
 
@@ -95,7 +93,7 @@ public class AppUtil {
 	 * ( 若调试开关关闭，则不打印 )
 	 */
 	public static void print(Throwable e) {
-		if (null == e || !isRelease) {
+		if (null == e || !Constants.isRelease) {
 			return;
 		}
 
