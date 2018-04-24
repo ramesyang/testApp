@@ -69,6 +69,12 @@
                     android:layout_height="wrap_content"
                     android:text="到自定义进度条和retrofitDemo"/>
 
+                <Button
+                    android:id="@+id/kotlin_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="到KotlinActivity页面"/>
+
                 <com.rames.testapp.views.FocusButton
                     android:id="@+id/focus_button"
                     android:layout_width="match_parent"

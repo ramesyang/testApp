@@ -1,16 +1,23 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "com.rames.testapp"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -32,14 +39,24 @@ allprojects {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+
+    // Retrofit库
+    // Okhttp库
+    // gson库
+    // 打印log的库
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.android.support:recyclerview-v7:23.2.0'
-
-    compile 'com.squareup.retrofit2:retrofit:2.3.0' // Retrofit库
-    compile 'com.squareup.okhttp3:okhttp:3.1.2' // Okhttp库
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0' // gson库
-    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0' // 打印log的库
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    apply plugin: 'kotlin-android-extensions'
+}
+repositories {
+    mavenCentral()
 }

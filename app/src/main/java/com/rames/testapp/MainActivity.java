@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,6 +34,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rames.testapp.kotlin.KotlinMainActivity;
+import com.rames.testapp.kotlin.TestCallback;
 import com.rames.testapp.util.LogUtil;
 import com.rames.testapp.util.NumberUtil;
 import com.rames.testapp.util.StatusBarUtils;
@@ -94,6 +97,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.auto_textview_btn).setOnClickListener(this);
         findViewById(R.id.invoke_btn).setOnClickListener(this);
         findViewById(R.id.progress_btn).setOnClickListener(this);
+        findViewById(R.id.kotlin_btn).setOnClickListener(this);
 
         circleBtn = (Button) findViewById(R.id.circle_progress_btn);
         circleBtn.setOnClickListener(this);
@@ -234,8 +238,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }else if(v.getId() == R.id.invoke_btn){
             InvokeActivity.show(this);
 
-        } else if (v.getId() == R.id.progress_btn){
-            ProgressViewActivity.show(this);
+        } else if (v.getId() == R.id.kotlin_btn){
+            KotlinMainActivity.Companion.show(this, new TestCallback() {
+                @Override
+                public void callback() {
+                    LogUtil.e("lkjlaskjdfklsjfklasjdfkljasdklfjsdklfjlk");
+                }
+            });
         }
     }
 
