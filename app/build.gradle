@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 23
@@ -29,7 +31,13 @@ android {
             testCoverageEnabled = true
         }
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
+
 
 allprojects {
     repositories {
@@ -55,7 +63,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    apply plugin: 'kotlin-android-extensions'
 }
 repositories {
     mavenCentral()

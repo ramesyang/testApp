@@ -32,7 +32,13 @@ class KotlinMainActivity : AppCompatActivity(), View.OnClickListener {
         btn_kotlin_main.setOnClickListener(this)
         var recycleView = findViewById(R.id.recycle_view) as RecyclerView
         recycleView.layoutManager = LinearLayoutManager(this)
-        adapter = TestAdapter(arrayListOf("afas", "2342", "3242", "309"))
+        adapter = TestAdapter(arrayListOf("a", "b", "c", "d"), object: ItemClickListener{
+            override fun onItemClick(position: Int) {
+                Tips.showTips(this@KotlinMainActivity, "第："+(position+1)+"个")
+            }
+        })
+
+//        adapter = TestAdapter(arrayListOf("a", "b", "c", "d"), ItemClickListener:() -> checkEvent())
         recycleView.adapter = adapter
 
 //        btn_kotlin_main.setOnClickListener{
@@ -48,8 +54,9 @@ class KotlinMainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    fun clickEvent(){
+    fun clickEvent(): Int{
         mytv = tv_kotlin_main.text.toString()
         Tips.showTips(this, mytv)
+        return mytv.length
     }
 }

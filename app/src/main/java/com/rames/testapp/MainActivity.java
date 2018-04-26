@@ -50,6 +50,23 @@ import com.rames.testapp.views.TestView;
 
 import java.io.IOException;
 
+//  ┏┓　　　┏┓
+//┏━┛┻━━━━━┛┻━━┓
+//┃　　　　　　　┃
+//┃     ━　　　 ┃
+//┃   ┳┛  ┗┳   ┃
+//┃            ┃
+//┃     ┻      ┃
+//┃　　　　　　　┃
+//┗━━┓　　　┏━━━┛
+//   ┃　　　┃   神兽保佑
+//   ┃　　　┃   代码无BUG！
+//   ┃　　　┗━━━━━━━━┓
+//   ┃　　　　　　  　┣┓
+//   ┃　　　　　　　  ┏┛
+//   ┗━┓┓┏━━━┳┓┏━━━━┛
+//     ┃┫┫　 ┃┫┫
+//     ┗┻┛　 ┗┻┛
 public class MainActivity extends Activity implements View.OnClickListener {
     private ShutEditText shutEditText;
     private EditText editText;
